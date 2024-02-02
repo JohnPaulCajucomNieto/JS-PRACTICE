@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>WEB PAGE</title>
+</head>
+<body>
+        <header>
+            <ul>
+                <li><a href="#">Get Element By ID</a></li>
+                <li><a href="#">Get Element By Classname</a></li>
+                <li><a href="#">Get Element By Tag</a></li>
+                <li><a href="#">Get Query Selector</a></li>
+    </header>
+    <h1>DOCUMENT OBJECT MODEL</h1>
+    <div class="conatainer">
+        <div class="container1">
+            <p style="color: orange;">Get Element By ID</p>
+            <p class="color">Get Element By Classname</p>
+            <p >Get Element By Tag</hp>
+            <h4  class="c1">Get Query Selector</h4>
+            <p><a class="s" id="link" target="_blank" href="https://www.udemy.com/">UDEMY</a></p>
+            <button onclick="myFunction()">CHANGE LINK</button>
+        </div>
+    </div>
+      
+
+    <script>
+        var divElements = document.getElementsByTagName("header");
+
+        for (var i = 0; i < divElements.length; i++) {
+            divElements[i].style.backgroundColor = "#333"; 
+            divElements[i].style.color = "white";
+        }
+    </script>
+    <script>
+       function myFunction() {
+        const element = document.getElementById("link");
+        element.innerHTML = "FREE CODE";
+        element.href = "https://www.freecodecamp.org/learn/front-end-development-libraries/";
+}   
+        const collection = document.getElementsByClassName("color");
+        collection[0].style.color = "green";
+
+
+
+        document.querySelector("h4").style.color = "blue";
+
+    </script>
+</body>
+</html>
